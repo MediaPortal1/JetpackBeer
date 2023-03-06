@@ -7,6 +7,7 @@ import com.example.beer.domain.Beer
 object BeerModelConverter {
 
     fun convertBeerResponseToList(s: List<BeerResponseItem>) =
+
         s.map { beer ->
             Beer(beer.id, beer.name, beer.description, beer.image_url)
         }

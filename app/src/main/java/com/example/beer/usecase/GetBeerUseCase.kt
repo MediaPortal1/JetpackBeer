@@ -14,7 +14,7 @@ class GetBeerUseCase @Inject constructor(private val repository: BeerRepository)
         return try {
             val response = repository.loadSomeBeers()
             val beers = BeerModelConverter.convertBeerResponseToList(response.data)
-            BeerListState.Result(beers)
+            BeerListState.Result(beers.sortedBy { it.name })
         } catch (e: Exception) {
             BeerListState.Error(e.message ?: "Unknown error")
         }

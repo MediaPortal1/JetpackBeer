@@ -64,12 +64,13 @@ fun BeerCard(beer: Beer) {
                 contentDescription = "Beer image",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .size(100.dp)
+                    .size(150.dp)
+                    .padding(0.dp, 20.dp)
                     .clip(
                         RoundedCornerShape(16.dp)
                     )
             )
+            Spacer(Modifier.width(10.dp))
             Column {
                 Text(beer.name, style = MaterialTheme.typography.h3)
                 Spacer(Modifier.height(10.dp))
