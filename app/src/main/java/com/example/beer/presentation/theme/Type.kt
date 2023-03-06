@@ -1,4 +1,4 @@
-package com.example.beer.ui.theme
+package com.example.beer.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
